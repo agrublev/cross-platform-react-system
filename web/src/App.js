@@ -1,12 +1,14 @@
-import React, { Component } from 'react'
-import test from 'core/test'
+import React, {Component} from 'react';
+import test from 'core/test';
 
-alert(test)
+alert(test);
 
 class App extends Component {
-  render() {
-    return <div>TEst</div>
-  }
+    render() {
+        return <div className="App">
+            Welecome to the real world!
+        </div>;
+    }
 }
 
-export default App
+export default App;

@@ -1,0 +1,12 @@
+{
+    "lerna": "2.9.0",
+    "packages": [
+        "web",
+        "desktop",
+        "mobile",
+        "core"
+    ],
+    "version": "independent",
+    "npmClient": "yarn",
+    "useWorkspaces": true
+}

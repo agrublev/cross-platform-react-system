@@ -6,7 +6,7 @@ alert(test);
 
 class App extends Component {
   render() {
-    return <View><Text>TEST</Text></View>;
+      return <View><Text>Welcome to the real world!</Text></View>;
   }
 }
 

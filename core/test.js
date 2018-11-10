@@ -1,2 +1,3 @@
-import value from './value'
-export default value
+const value = "SHARED VALUE";
+
+module.exports = value;

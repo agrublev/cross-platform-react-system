@@ -5,6 +5,9 @@
         "start:web": "cd web && yarn start",
         "start:desktop": "cd desktop && yarn start"
     },
+    "devDependencies": {
+        "lerna": "^2.9.0"
+    },
     "workspaces": [
         "web",
         "desktop",
