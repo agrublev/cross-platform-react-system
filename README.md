@@ -1,3 +1,13 @@
+[![npm package](https://img.shields.io/npm/dm/parcel-bundler.svg)](https://www.npmjs.com/package/parcel-bundler)
+
+## Features
+
+- 🚀 **Blazing fast** 
+- 📦 Out of the box, it just works
+- ✂️ Zero configuration
+- 🔥 Built in support for **hot module replacement**
+- and more :P
+
 # Legendary
 
 A react based system that can be run on virtual ALL platforms!
