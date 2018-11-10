@@ -1,0 +1,14 @@
+{
+    "private": true,
+    "scripts": {
+        "start:mobile": "cd mobile && yarn start",
+        "start:web": "cd web && yarn start",
+        "start:desktop": "cd desktop && yarn start"
+    },
+    "workspaces": [
+        "web",
+        "desktop",
+        "mobile",
+        "core"
+    ]
+}

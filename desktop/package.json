@@ -1,0 +1,90 @@
+{
+    "name": "desktop",
+    "description": "Desktop",
+    "version": "1.0.5",
+    "main": "src/main.js",
+    "private": true,
+    "dependencies": {
+        "electron-context-menu": "^0.10.1",
+        "electron-is-dev": "^1.0.1",
+        "electron-log": "^2.2.17",
+        "electron-updater": "^3.2.2",
+        "electron-window-state": "^5.0.2"
+    },
+    "devDependencies": {
+        "electron": "^3.0.8",
+        "electron-builder": "^20.33.2",
+        "nodemon": "^1.18.6",
+        "rimraf": "^2.6.2"
+    },
+    "scripts": {
+        "start": "nodemon --exec \"electron ./src/main.js\" -w ./src",
+        "prepackage": "rimraf release",
+        "package": "build",
+        "package:mac": "yarn run package --mac",
+        "package:linux": "yarn run package --linux",
+        "package:win": "yarn run package --win --x64",
+        "package:all": "yarn run package -mwl",
+        "package:test": "yarn run package --linux",
+        "release": "yarn run package:all --publish always"
+    },
+    "build": {
+        "productName": "Freedcamp",
+        "appId": "freedcamp.chat",
+        "copyright": "Copyright © 2018 Freedcamp Inc.",
+        "publish": [
+            {
+                "provider": "github",
+                "repo": "spectrum",
+                "owner": "withspectrum"
+            }
+        ],
+        "releaseInfo": {
+            "releaseName": "${name} Desktop App v${version}"
+        },
+        "files": [
+            "src/**/*",
+            "node_modules/**/*",
+            "resources/**/*",
+            "package.json"
+        ],
+        "directories": {
+            "buildResources": "resources",
+            "output": "release"
+        },
+        "mac": {
+            "category": "public.app-category.social-networking",
+            "target": "default",
+            "icon": "resources/icons/mac/icon.icns"
+        },
+        "dmg": {
+            "background": "resources/background.tiff",
+            "iconTextSize": 14,
+            "contents": [
+                {
+                    "x": 158,
+                    "y": 213,
+                    "type": "file"
+                },
+                {
+                    "x": 385,
+                    "y": 213,
+                    "type": "link",
+                    "path": "/Applications"
+                }
+            ]
+        },
+        "linux": {
+            "icon": "resources/icons/png/icon-512x512.png",
+            "category": "Network",
+            "target": [
+                "AppImage",
+                "deb"
+            ]
+        },
+        "win": {
+            "target": "nsis",
+            "icon": "resources/icons/win/icon.ico"
+        }
+    }
+}
