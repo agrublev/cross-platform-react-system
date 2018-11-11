@@ -1,6 +1,6 @@
 [![npm package](https://img.shields.io/npm/dm/parcel-bundler.svg)](https://www.npmjs.com/package/parcel-bundler)
 
-## Features
+## Features TEST
 
 - 🚀 **Blazing fast** 
 - 📦 Out of the box, it just works
